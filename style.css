@@ -267,6 +267,38 @@ section {
     flex-wrap: wrap;
     gap: 8px;
 }
+/* Hover Effect */
+.skill:hover {
+    background: #f1f4ff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bar {
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #4b7bec;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* Optional: animate bar on hover */
+.skill:hover .bar span {
+    opacity: 0.9;
+}
 
 .chip {
     background: rgba(255, 255, 255, 0.5);
@@ -331,6 +363,14 @@ textarea {
 .contact-info a:hover {
     text-decoration: underline;
 }
+.skill {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 
 footer {
     color: var(--muted);
