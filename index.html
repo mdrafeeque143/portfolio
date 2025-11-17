@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md_Rafeeque_Choudhri_Portfolio</title>
+    <link rel="icon" type="image/png" href="mdd.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo"><img src="r.jpeg" alt="logo" height="50px" width="50px" ></div>
+                <div>
+                    <div style="font-weight:700">Md Rafeeque</div>
+                    <div style="font-size:12px;color:var(--muted)">Java Full Stack Developer</div>
+                </div>
+            </div>
+            <nav class="desktop">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="mobile" id="mobile-menu">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-card">
+                    <div class="eyebrow">Hello — I build web apps</div>
+                    <h1>Hi, I'm Md Rafeeque.<br>Java Full-Stack Developer.</h1>
+                    <p class="lead">I craft modern, accessible web applications with Java, Spring Boot and modern
+                        frontend tools. I enjoy clean code, good UX and shipping features that help people.</p>
+                    <a class="cta" href="#projects">See my work</a>
+                </div>
+                <aside class="profile-card">
+                    <div class="avatar">
+                        <img src="rafe.jpg" alt="Md Rafeeque">
+                    </div>
+                    <div style="width:100%">
+                        <div class="meta">
+                            <div>Experience: <br><strong style="color:#0d1b2c">Fresher</strong></div>
+                            <div>Email: <br><strong>
+                                <a href="mailto:mdrafeequechoudhri2@gmail.com" style="color:#0f223a;text-decoration:none">mdrafeequechoudhri2@gmail.com</a>
+                            </strong></div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- About Section -->
+            <section id="about">
+                <div class="section-title">
+                    <h2>About</h2>
+                </div>
+                <div class="hero-card">
+                    <p style="margin:0;color:var(--muted)">I'm a passionate full-stack developer fresher specializing in
+                        Java (Spring Boot), REST APIs, relational databases and frontend development using HTML, CSS and
+                        JavaScript frameworks. I enjoy learning, solving problems and building complete products from
+                        scratch.</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <div class="section-title">
+                    <h2>Projects</h2>
+                    <div style="color:var(--muted);font-size:13px">Selected work</div>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <div class="project-thumb"><img src="task.jpeg" alt="Task Manager"></div>
+                        <h3>Task Manager</h3>
+                        <div class="tags">Spring Boot , Thymeleaf , MySQL</div>
+                        <p style="color:var(--muted);margin-top:8px">A full-featured task management web app with user
+                            auth, roles and REST APIs.</p>
+                    </article>
+                    <article class="card">
+                        <div class="project-thumb"><img src="em.jpeg" alt="E-shop"></div>
+                        <h3>E-shop</h3>
+                        <div class="tags">React , Node , Express , MongoDB</div>
+                        <p style="color:var(--muted);margin-top:8px">A responsive e-commerce front-end with product
+                            search, cart and checkout flows.</p>
+                    </article>
+                    <article class="card">
+                        <div class="project-thumb"><img src="p.jpeg" alt="Portfolio"></div>
+                        <h3>Portfolio</h3>
+                        <div class="tags">HTML , CSS </div>
+                        <p style="color:var(--muted);margin-top:8px">This portfolio — lightweight and mobile-first.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+                <div class="card">
+                    <div class="skills">
+                        <div class="chip">Java</div>
+                        <div class="chip">Spring Boot</div>
+                        <div class="chip">REST APIs</div>
+                        <div class="chip">HTML & CSS</div>
+                        <div class="chip">JavaScript</div>
+                        <div class="chip">SQL / MySQL</div>
+                        <div class="chip">Git</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> 
+                            <a href="mailto:mdrafeequechoudhri2@gmail.com">mdrafeequechoudhri2@gmail.com</a>
+                        </p>
+                        <p><strong>Phone:</strong> 
+                            <a href="tel:7026433747">+91 70264 33747</a>
+                        </p>
+                    </div>
+
+                    <form action="mailto:mdrafeequechoudhri2@gmail.com" method="POST" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button class="btn" type="submit" onclick="submitMessage()">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer style="background-color: #0d1b2c5b;">
+            © <span id="year"></span> Md Rafeeque — Built with HTML, CSS
+        </footer>
+    </div>
+
+<script>
+  // ===== Set current year in footer =====
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Mobile menu toggle =====
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // ===== Smooth scrolling for all nav links =====
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if(targetSection){
+        window.scrollTo({
+          top: targetSection.offsetTop - 80, // adjust offset for sticky navbar
+          behavior: 'smooth'
+        });
+      }
+      // close mobile menu after click
+      if(mobileMenu.style.display === 'flex'){
+        mobileMenu.style.display = 'none';
+      }
+    });
+  });
+
+  // ===== Highlight active section in nav on scroll =====
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY + 100; // offset for sticky header
+    sections.forEach(section => {
+      if(scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight){
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if(link.getAttribute('href').substring(1) === section.id){
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+
+  function submitMessage() {
+    // Get form values
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+
+    // Simple validation
+    if (!name || !email || !message) {
+        alert("Please fill out all fields!");
+        return;
+    }
+
+    // You can handle form submission here (e.g., send to server via fetch or email API)
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    // Feedback to user
+    alert("Message sent successfully!");
+
+    // Optionally clear the form
+    document.querySelector('input[name="name"]').value = '';
+    document.querySelector('input[name="email"]').value = '';
+    document.querySelector('textarea[name="message"]').value = '';
+}
+
+</script>
+
+    </script>
+</body>
+</html>
