@@ -38,7 +38,7 @@
 
         <main>
             <!-- Hero Section -->
-            <section class="hero">
+            <section class="hero" >
                 <div class="hero-card">
                     <div class="eyebrow">Hello — I build web apps</div>
                     <h1>Hi, I'm Md Rafeeque.<br />Java Full-Stack Developer.</h1>
@@ -55,7 +55,12 @@
               color: white;
               border-radius: 6px;
               text-decoration: none;
-            ">
+              display: flex;
+              width: 220px;
+              height: 40px;
+              align-items: center;
+              margin-top: 10px;
+              ">
                         📄 Download Resume
                     </a>
                 </div>
@@ -138,9 +143,6 @@
 
             <!-- Skills -->
             <section id="skills">
-                <div class="section-title">
-                    <h2>Skills</h2>
-                </div>
 
                 <div class="skills-card">
                     <h3 class="title">Skills</h3>
@@ -222,30 +224,30 @@
     <script>
         // Init EmailJS
         (function () {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Paste your EmailJS public key
+            emailjs.init("O_A1L87QTY6MxC2hG"); // Paste your EmailJS public key
         })();
 
         // Contact Form Submission
         document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+    e.preventDefault();
 
-            emailjs
-                .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                    from_name: document.getElementById("name").value,
-                    from_email: document.getElementById("email").value,
-                    message: document.getElementById("message").value,
-                })
-                .then(
-                    function () {
-                        alert("Message sent successfully!");
-                        document.getElementById("contactForm").reset();
-                    },
-                    function (error) {
-                        alert("Failed to send message. Try again!");
-                        console.log(error);
-                    }
-                );
+    const params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_boftjvj", "template_ytkkuaq", params)
+        .then(function () {
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        })
+        .catch(function (err) {
+            alert("Message failed. Check console.");
+            console.log("EmailJS Error:", err);
         });
+});
+
 
         // Footer year
         document.getElementById("year").textContent = new Date().getFullYear();
